@@ -3,28 +3,27 @@ import { Countdown } from "../Components/Countdown";
 import { ExperienceBar } from "../Components/ExperienceBar";
 import { Profile } from "../Components/Profile";
 
-import Head from 'next/head';
+import Head from "next/head";
 
-import styles from '../styles/pages/Home.module.css';
+import styles from "../styles/pages/Home.module.css";
 
 export default function Home() {
 	return (
-	<div className={styles.container}>
+		<div className={styles.container}>
+			<Head>
+				<title>Home | Moovit </title>
+			</Head>
 
-		<Head>
-			<title>Home | Moovit </title>
-		</Head>
+			<ExperienceBar />
 
-		<ExperienceBar />
-
-		<section>
-			<div>
-				<Profile />
-				<CompletedChallenges />
-				<Countdown />
-			</div>
-			<div></div>
-		</section>
-	</div>
+			<section>
+				<div>
+					<Profile />
+					<CompletedChallenges />
+					<Countdown />
+				</div>
+				<div></div>
+			</section>
+		</div>
 	);
 }
